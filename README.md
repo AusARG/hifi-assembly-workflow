@@ -2,18 +2,18 @@
 ==============
 Australian BioCommons Documentation Guidelines
 
+Currently documentation is under development
+
+
 ```
-###################################################################################
-### Delete this section when the first version of the documentation is complete ###
-###################################################################################
+Quick Usage:
+module load nextflow/21.04.3
+nextflow run hifi_assembly.nf --bam-folder <BAM FILE FOLDER PATH> -profile <gadi/balder/local>
 
-You can make use of this template repository as a base template for a new GitHub repository.
+To submit jobs to gadi PBS cluster use '-profile gadi'
 
-General information about the guidelines
+For running on interactive mode use '-profile local'
 
-- This **template** repository contains a set of guidelines for documenting bioinformatics tools and workflows. 
-- The initial version uploaded to GitHub was informed by current documentation practices and structures used in the GitHub community.
-- These guidelines will be further developed as needed to meet the requirements of the Australian BioCommons community.
 ```
 
 ---
