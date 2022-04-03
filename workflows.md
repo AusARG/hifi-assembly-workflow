@@ -26,9 +26,15 @@
 # Description
 
 ```
-Introduction of workflow and its component tools.
+AusARG/hifi-assembly-workflow is a bioinformatics pipeline that can be used to analyse Pacbio CCS reads for denovo genome assembly. workflow usage, dependencies, modules used and output formats are described as shown below.
 
-Table with embedded registry links.
+Modules:
+
+The workflow consists of mainly three modules. 
+1. Pre-QC consist of bam to fasta conversion, k-mer analysis and genome profiling processes.
+2. The assembly module consists of processing CCS data using IPA
+3. The post assembly-QC module consists of assembly evaluation and an assessment of completeness.
+
 ```
 
 ---

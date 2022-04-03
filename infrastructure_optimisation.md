@@ -1,41 +1,59 @@
-[tool / workflow name] on [system name] @ [infrastructure name]
+HiFi Assembly workflow on NCI gadi
 ===========
 
 ---
 
 # Accessing tool/workflow
 
+Pipeline consists of mainly three modules. 
+1.	Preqc consist of bam to fasta conversion, k-mer analysis and genome profiling processes.
+2.	Assembly module consists of processing CCS data using IPA
+3.	Post assembly module consists of assembly evaluation and assessing completeness.
+
+
+Dependencies:
+
+The following packages are used by the pipeline.
 ```
-How can the workflow be accessed? Manual install, or is it available as a module install, for example?
-
-Includes straightforward signing in to *HPC/HTC*
+nextflow/21.04.3
+samtools/1.12
+jellyfish/2.3.0
+genomescope/2.0
+ipa/1.3.1
+quast/5.0.2
+busco/5.2.2
 ```
-
----
-
-# Installation
-
+The following paths contains all modules required for the pipeline.
 ```
-How to install the workflow on the infrastructure specified.
+/apps/Modules/modulefiles 
+/g/data/wz54/groupResources/modules 
 ```
-
----
 
 # Quickstart tutorial
 
+login to gadi with you credientails and set module path variable
+
+In case, quick usage described on README.md didn't work on your environment. You can try the following:
+
+Set MODULEPATH 
 ```
-A tutorial to get a user started as quickly as practical.
+MODULEPATH=/apps/Modules/modulefiles:/g/data/wz54/groupResources/modules:/g/data/if89/apps/modulefiles:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles
+
+export MODULEPATH
 ```
 
----
-
-# Optimisation required
-
+export scripts to the PATH variable
 ```
-Were any optimisations required that were specific to the HPC / HTC infrastructure used?
+PATH=$PATH:/g/data/wz54/groupResources/scripts/hifi-assembly-workflow
 ```
 
----
+This workflow can be run on NCI gadi or on AGRF balder
+
+Submitting jobs to gadi cluster
+```
+hifi_assembly.nf --bam_folder <PATH_TO_BAM_FOLDER> -profile gadi
+```
+
 
 # Acknowledgements / citations / credits
 

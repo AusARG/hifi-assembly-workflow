@@ -19,6 +19,5 @@ bam_tag = bamFile.baseName
 script:
 """
 ipa local --nthreads 40 --njobs 4 -i ${bamFile}
-
 """
 }

@@ -39,7 +39,7 @@ process assemblies_completeness {
 
     shell:
     """
-    run_BUSCO.py -f -i $primary -o primary_busco -l $params.busco_db -c 32 -m genome
-    run_BUSCO.py -f -i $secondary -o associate_busco -l $params.busco_db -c 32 -m genome
+    busco -f -i $primary -o primary_busco -l $params.busco_db -c 32 -m genome --offline
+    busco -f -i $secondary -o associate_busco -l $params.busco_db -c 32 -m genome --offline
     """	
 }
