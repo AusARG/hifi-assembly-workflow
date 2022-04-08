@@ -1,12 +1,12 @@
 # HiFi *de novo* genome assembly workflow
 
-HiFi-assembly-workflow is a bioinformatics pipeline that can be used to analyse Pacbio CCS reads for denovo genome assembly using PacBio Circular Consensus Sequencing (CCS)  reads. This workflow is implemented in Nextflow and has 3 major sections. 
+HiFi-assembly-workflow is a bioinformatics pipeline that can be used to analyse Pacbio CCS reads for *de novo* genome assembly using PacBio Circular Consensus Sequencing (CCS)  reads. This workflow is implemented in Nextflow and has 3 major sections. 
  
 Please refer to the following documentation for detailed description of each workflow section:
  
-Pre-assembly quality control (QC)
-Assembly 
-Post-assembly QC
+- Pre-assembly quality control (QC)
+- Assembly 
+- Post-assembly QC
 
 ## HiFi assembly workflow flowchart
 
@@ -18,10 +18,11 @@ The pipeline has been tested  on NCI Gadi and AGRF balder cluster. If needed to 
 Please note for running this on NCI Gadi you need access. Please refer to Gadi guidelines for account creation and usage: these can be found at https://opus.nci.org.au/display/Help/Access.
 
 Here is an example that can be used to run a phased assembly on Gadi:
-```
 
+```
 Module load nextflow/21.04.3
 nextflow run Hifi_assembly.nf –bam_folder <PATH TO THE BAM FOLDER> -profile gadi 
+
 The workflow accepts 2 mandatory arguments:
 --bam_folder     --    Full Path to the CCS bam files
 -profile         --    gadi/balder/local
@@ -32,6 +33,7 @@ Please note that you can either run jobs interactively or submit jobs to the clu
 # General recommendations for using the HiFi *de novo* genome assembly workflow
 
 ## Example local profile usage
+
 ```
 Start a screen, submit a job, and run the workflow 
 Screen -S ‘name’
@@ -42,7 +44,6 @@ export MODULEPATH=/apps/Modules/modulefiles:/g/data/wz54/groupResources/modules
 module load nextflow/21.04.3
 nextflow run /g/data/wz54/groupResources/scripts/pl/hifi_assembly.nf  --bam_folder  <bam-folder_path> -profile local
 
-
 This load the scripts directory to the environmental PATH and load nextflow module
 module load hifi_assembly/1.0.0 
 ```
@@ -50,16 +51,17 @@ module load hifi_assembly/1.0.0
 # Outputs
 
 Pipeline generates various files and folders here is a brief description: 
-The pipeline creates a folder called “secondary_analysis” that contains two sub folders named 
-exeReport     
-Results        -- Contains preQC, assembly and postQC analysis files
+The pipeline creates a folder called `secondary_analysis` that contains two sub folders named:
+
+- `exeReport`     
+- `Results`       -- Contains preQC, assembly and postQC analysis files
 
 ## exeReport
 This folder contains a computation resource usage summary in various charts and a text file. 
-“report.html” provides a comprehensive summary.
+`report.html` provides a comprehensive summary.
 
 ## Results
-The ‘Results’ folder contains three sub-directories preQC, assembly and postqc. As the name suggests, outputs from the respective workflow sections are placed in each of these folders.
+The `Results` folder contains three sub-directories preQC, assembly and postqc. As the name suggests, outputs from the respective workflow sections are placed in each of these folders.
 
 ### preQC
 The following table contains list of files and folder from preQC results
@@ -77,17 +79,21 @@ The following table contains list of files and folder from preQC results
 
 ### Assembly
 This folder contains final assembly results in <FASTA> format.
-<sample>_primary.fa    - Fasta file containing primary contigs
-<sample>_associate.fa    - Fasta file containing associated contigs
+
+- `<sample>_primary.fa` - Fasta file containing primary contigs
+- `<sample>_associate.fa` - Fasta file containing associated contigs
 
 ### postqc
+ 
 The postqc folder contains two sub folders 
-assembly_completeness
-assembly_evaluation
-assembly_completeness
+
+- `assembly_completeness`
+- `assembly_evaluation`
+
+#### assembly_completeness
 This contains BUSCO evaluation results for primary and associate contig.
 
-### assembly_evaluation
+#### assembly_evaluation
 Assembly evaluation folder contains various file formats, here is a brief description for each of the outputs.
 
 | File        | Description                                                                               |
@@ -160,26 +166,25 @@ https://github.com/AustralianBioCommons/doc_guidelines/blob/master/infrastructur
 
 
 ## Required (minimum) inputs/parameters
-​ 
- PATH to HIFI bam folder is the minimum requirement for the processing the pipeline
+ 
+PATH to HIFI bam folder is the minimum requirement for the processing the pipeline.
 
-​
 ## Third party tools / dependencies
-​
-​The following packages are used by the pipeline.
-nextflow/21.04.3
-samtools/1.12
-jellyfish/2.3.0
-genomescope/2.0
-ipa/1.3.1
-quast/5.0.2
-busco/5.2.2
+
+The following packages are used by the pipeline.
+
+- `nextflow/21.04.3`
+- `samtools/1.12`
+- `jellyfish/2.3.0`
+- `genomescope/2.0`
+- `ipa/1.3.1`
+- `quast/5.0.2`
+- `busco/5.2.2`
 
 The following paths contain all modules required for the pipeline.
-/apps/Modules/modulefiles 
-/g/data/wz54/groupResources/modules 
 
-
+- `/apps/Modules/modulefiles`
+- `/g/data/wz54/groupResources/modules`
 
 ---
 
