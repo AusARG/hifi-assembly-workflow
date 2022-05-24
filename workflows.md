@@ -33,12 +33,18 @@ Please refer to the following documentation for detailed description of each wor
 - Assembly 
 - Post-assembly QC
 
-## HiFi assembly workflow flowchart
+---
+
+# Diagram
 
 ![flow chart ](workflow.png?raw=true "HiFi assembly workflow flowchart")
 
+---
 
-# Quick Usage:
+# User guide
+
+## Quick start guide
+
 The pipeline has been tested  on NCI Gadi and AGRF balder cluster. If needed to run on AGRF cluster, please contact us at bioinformatics@agrf.org.au.
 Please note for running this on NCI Gadi you need access. Please refer to Gadi guidelines for account creation and usage: these can be found at https://opus.nci.org.au/display/Help/Access.
 
@@ -54,9 +60,15 @@ The workflow accepts 2 mandatory arguments:
 
 Please note that you can either run jobs interactively or submit jobs to the cluster. This is determined by the -profile flag. By passing the gadi tag to the profile argument, the jobs are submitted and run on the cluster.
 
-# General recommendations for using the HiFi *de novo* genome assembly workflow
+## Infrastructure usage and recommendations
 
-## Example local profile usage
+### NCI facility access
+One should have a user account set with NCI to access gadi high performance computational facility. Setting up a NCI account is mentioned in detail at the following URL: https://opus.nci.org.au/display/Help/Setting+up+your+NCI+Account 
+  
+Documentation for a specific infrastructure should go into a infrastructure documentation template
+https://github.com/AustralianBioCommons/doc_guidelines/blob/master/infrastructure_optimisation.md
+
+### Example local profile usage
 
 ```
 Start a screen, submit a job, and run the workflow 
@@ -69,7 +81,7 @@ This load the scripts directory to the environmental PATH and load nextflow modu
 module load hifi_assembly/1.0.0 
 ```
 
-# Outputs
+### Outputs
 
 Pipeline generates various files and folders here is a brief description: 
 The pipeline creates a folder called `secondary_analysis` that contains two sub folders named:
@@ -77,14 +89,14 @@ The pipeline creates a folder called `secondary_analysis` that contains two sub 
 - `exeReport`     
 - `Results`       -- Contains preQC, assembly and postQC analysis files
 
-## exeReport
+#### exeReport
 This folder contains a computation resource usage summary in various charts and a text file. 
 `report.html` provides a comprehensive summary.
 
-## Results
+#### Results
 The `Results` folder contains three sub-directories preQC, assembly and postqc. As the name suggests, outputs from the respective workflow sections are placed in each of these folders.
 
-### preQC
+##### preQC
 The following table contains list of files and folder from preQC results
 
 | Output folder/file | File             | Description                                                                    |
@@ -97,24 +109,25 @@ The following table contains list of files and folder from preQC results
 |                    | summary.txt      | Summary metrics of genome scope outputs                                        |
 |                    | linear\_plot.png | Plot showing no. of times a k-mer observed by no. of k-mers with that coverage |
 
+##### Assembly
 
-### Assembly
 This folder contains final assembly results in <FASTA> format.
 
 - `<sample>_primary.fa` - Fasta file containing primary contigs
 - `<sample>_associate.fa` - Fasta file containing associated contigs
 
-### postqc
+##### postqc
  
 The postqc folder contains two sub folders 
 
 - `assembly_completeness`
 - `assembly_evaluation`
 
-#### assembly_completeness
+###### assembly_completeness
 This contains BUSCO evaluation results for primary and associate contig.
 
-#### assembly_evaluation
+###### assembly_evaluation
+
 Assembly evaluation folder contains various file formats, here is a brief description for each of the outputs.
 
 | File        | Description                                                                               |
@@ -124,16 +137,6 @@ Assembly evaluation folder contains various file formats, here is a brief descri
 | report.tex  | LaTeX version of the summary                                                              |
 | icarus.html | Icarus main menu with links to interactive viewers                                        |
 | report.html | HTML version of the report with interactive plots inside                                  |
-
-
-# Infrastructure usage and recommendations
-
-### NCI facility access
-One should have a user account set with NCI to access gadi high performance computational facility. Setting up a NCI account is mentioned in detail at the following URL: https://opus.nci.org.au/display/Help/Setting+up+your+NCI+Account 
-  
-Documentation for a specific infrastructure should go into a infrastructure documentation template
-https://github.com/AustralianBioCommons/doc_guidelines/blob/master/infrastructure_optimisation.md
-
 
 ## Compute resource usage across tested infrastructures
 
@@ -160,7 +163,14 @@ https://github.com/AustralianBioCommons/doc_guidelines/blob/master/infrastructur
 | evaluate assemblies                   | 2m 48s                                     | 2m 48s | 97.50% | 1.1 GB | 1.4 GB | 8.7 GB | 1.8 GB |
 | assemblies completeness               | 22m 36s                                    | 22m 36s | 2144.00% | 22.2 GB | 25 GB | 389.7 GB | 1.4 GB |
 
+--- 
+  
+# Benchmarking
+  
+N/A
 
+---
+  
 # Workflow summaries
 
 ## Metadata
@@ -221,6 +231,8 @@ Direct training and help is available if you are new to HPC and/or new to NCI/Ga
 - For NCI support, contact the NCI helpdesk directly at https://www.nci.org.au/users/nci-helpdesk
 - Queue limits and structure explained at https://opus.nci.org.au/display/Help/4.+PBS+Jobs
 
+---
+
 # 3rd party Tutorials 
 
 A tutorial by Andrew Severin on running GenomeScope 1.0 is available here:
@@ -231,6 +243,8 @@ https://github.com/PacificBiosciences/pbbioconda/wiki/Improved-Phased-Assembler
 
 Busco tutorial
 https://wurmlab.com/genomicscourse/2016-SIB/practicals/busco/busco_tutorial
+
+---
 
 # Licence(s)
 
@@ -255,6 +269,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
 
 # Acknowledgements/citations/credits
 
