@@ -140,25 +140,25 @@ https://github.com/AustralianBioCommons/doc_guidelines/blob/master/infrastructur
 |                                       | Computational resource for plant case study |
 | ------------------------------------- | ------------------------------------------- |
 |                                       | Time                                        | CPU | Memory | I/O |
-| Process                               | duration                                    | realtime | %cpu | peak\_rss | peak\_vmem | rchar | wchar |
-| Converting bam to fasta for sample    | 12m 54s                                     | 12m 48s | 99.80% | 5.2 MB | 197.7 MB | 43.3 GB | 50.1 GB |
-| Generating k-mer counts and histogram | 26m 43s                                     | 26m 36s | 1725.30% | 19.5 GB | 21 GB | 77.2 GB | 27.1 GB |
-| Profiling genome characteristics      | 34.7s                                       | 13.2s | 89.00% | 135 MB | 601.2 MB | 8.5 MB | 845.9 KB |
-| Denovo assembly                       | 6h 51m 15s                                  | 6h 51m 11s | 4744.40% | 84.7 GB | 225.6 GB | 1.4 TB | 456 GB |
-| evaluate\_assemblies                  | 5m 18s                                      | 4m 54s | 98.20% | 1.6 GB | 1.9 GB | 13.6 GB | 2.8 GB |
-| assemblies\_completeness              | 25m 57s                                     | 25m 53s | 2624.20% | 22 GB | 25.2 GB | 624.9 GB | 2.9 GB |
+| Process                               | realtime                                   | realtime | %cpu | peak\_rss | peak\_vmem | rchar | wchar |
+| Converting bam to fasta for sample    | 12m 48s                                     | 12m 48s | 99.80% | 5.2 MB | 197.7 MB | 43.3 GB | 50.1 GB |
+| Generating k-mer counts and histogram | 26m 36s                                     | 26m 36s | 1725.30% | 19.5 GB | 21 GB | 77.2 GB | 27.1 GB |
+| Profiling genome characteristics      | 13.2s                                       | 13.2s | 89.00% | 135 MB | 601.2 MB | 8.5 MB | 845.9 KB |
+| Denovo assembly                       | 6h 51m 11s                                  | 6h 51m 11s | 4744.40% | 84.7 GB | 225.6 GB | 1.4 TB | 456 GB |
+| evaluate\_assemblies                  | 4m 54s                                      | 4m 54s | 98.20% | 1.6 GB | 1.9 GB | 13.6 GB | 2.8 GB |
+| assemblies\_completeness              | 25m 53s                                     | 25m 53s | 2624.20% | 22 GB | 25.2 GB | 624.9 GB | 2.9 GB |
 
 
 |                                       | Computational resource for bird case study |
 | ------------------------------------- | ------------------------------------------ |
 |                                       | Time                                       | CPU | Memory | I/O |
-| Process                               | duration                                   | realtime | %cpu | peak\_rss | peak\_vmem | rchar | wchar |
-| Converting bam to fasta for sample    | 12m 54s                                    | 7m 9s | 86.40% | 5.2 MB | 197.8 MB | 21.5 GB | 27.4 GB |
-| Generating k-mer counts and histogram | 26m 43s                                    | 15m 34s | 1687.70% | 10.1 GB | 11.7 GB | 44 GB | 16.6 GB |
-| Profiling genome characteristics      | 34.7s                                      | 1m 15s | 15.30% | 181.7 MB | 562.2 MB | 8.5 MB | 819.1 KB |
-| De novo assembly                      | 6h 51m 15s                                 | 9h 2m 47s | 1853.50% | 67.3 GB | 98.4 GB | 1 TB | 395.6 GB |
-| evaluate assemblies                   | 5m 18s                                     | 2m 48s | 97.50% | 1.1 GB | 1.4 GB | 8.7 GB | 1.8 GB |
-| assemblies completeness               | 25m 57s                                    | 22m 36s | 2144.00% | 22.2 GB | 25 GB | 389.7 GB | 1.4 GB |
+| Process                               | realtime                                   | realtime | %cpu | peak\_rss | peak\_vmem | rchar | wchar |
+| Converting bam to fasta for sample    | 7m 9s                                    | 7m 9s | 86.40% | 5.2 MB | 197.8 MB | 21.5 GB | 27.4 GB |
+| Generating k-mer counts and histogram | 15m 34s                                    | 15m 34s | 1687.70% | 10.1 GB | 11.7 GB | 44 GB | 16.6 GB |
+| Profiling genome characteristics      | 1m 15s                                      | 1m 15s | 15.30% | 181.7 MB | 562.2 MB | 8.5 MB | 819.1 KB |
+| De novo assembly                      | 9h 2m 47s                                 | 9h 2m 47s | 1853.50% | 67.3 GB | 98.4 GB | 1 TB | 395.6 GB |
+| evaluate assemblies                   | 2m 48s                                     | 2m 48s | 97.50% | 1.1 GB | 1.4 GB | 8.7 GB | 1.8 GB |
+| assemblies completeness               | 22m 36s                                    | 22m 36s | 2144.00% | 22.2 GB | 25 GB | 389.7 GB | 1.4 GB |
 
 
 # Workflow summaries
@@ -215,20 +215,56 @@ The following paths contain all modules required for the pipeline.
 
 # Help/FAQ/Troubleshooting
 
----
+Direct training and help is available if you are new to HPC and/or new to NCI/Gadi.
+
+Basic information to get started with the NCI GADI for bioinformatics can be found at https://github.com/AusARG/ABLeS/wiki/temppage.
+For NCI support, contact the NCI helpdesk directly at https://www.nci.org.au/users/nci-helpdesk
+Queue limits and structure explained at https://opus.nci.org.au/display/Help/4.+PBS+Jobs
 
 # 3rd party Tutorials 
 
----
+A tutorial by Andrew Severin on running GenomeScope 1.0 is available here:
+https://github.com/AusARG/hifi-assembly-workflow.git
+
+Improved Phased Assembler tutorial is available at 
+https://github.com/PacificBiosciences/pbbioconda/wiki/Improved-Phased-Assembler
+
+Busco tutorial
+https://wurmlab.com/genomicscourse/2016-SIB/practicals/busco/busco_tutorial
 
 # Licence(s)
 
----
+MIT License
+
+Copyright (c) 2022 AusARG
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 # Acknowledgements/citations/credits
 
 ```
-Any attribution information that is relevant to the workflow being documented.
+Jung, H. et al. Twelve quick steps for genome assembly and annotation in the classroom. PLoS Comput. Biol. 16, 1–25 (2020).
+2020, G. A. W. No Title. https://ucdavis-bioinformatics-training.github.io/2020-Genome_Assembly_Workshop/kmers/kmers.
+Sović, I. et al. Improved Phased Assembly using HiFi Data. (2020).
+Gurevich, A., Saveliev, V., Vyahhi, N. & Tesler, G. QUAST: Quality assessment tool for genome assemblies. Bioinformatics 29, 1072–1075 (2013).
+Waterhouse, R. M. et al. BUSCO applications from quality assessments to gene prediction and phylogenomics. Mol. Biol. Evol. 35, 543–548 (2018).
+
 ```
 
 ---
