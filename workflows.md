@@ -29,9 +29,9 @@ HiFi-assembly-workflow is a bioinformatics pipeline that can be used to analyse 
  
 Please refer to the following documentation for detailed description of each workflow section:
  
-- Pre-assembly quality control (QC)
-- Assembly 
-- Post-assembly QC
+- [Pre-assembly quality control (QC)](https://github.com/AusARG/hifi-assembly-workflow/blob/master/recommendations.md#stage-1-pre-assembly-quality-control)
+- [Assembly](https://github.com/AusARG/hifi-assembly-workflow/blob/master/recommendations.md#stage-2-assembly)
+- [Post-assembly QC](https://github.com/AusARG/hifi-assembly-workflow/blob/master/recommendations.md#stage-3-post-assembly-quality-control)
 
 ---
 
