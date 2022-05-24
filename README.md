@@ -4,30 +4,29 @@ HiFi-assembly-workflow is a bioinformatics pipeline that can be used to analyse 
  
 Please refer to the following documentation for detailed description of each workflow section:
  
-- Pre-assembly quality control (QC)
-- Assembly 
-- Post-assembly QC
+- [Pre-assembly quality control (QC)](https://github.com/AusARG/hifi-assembly-workflow/blob/master/recommendations.md#stage-1-pre-assembly-quality-control)
+- [Assembly](https://github.com/AusARG/hifi-assembly-workflow/blob/master/recommendations.md#stage-2-assembly)
+- [Post-assembly QC](https://github.com/AusARG/hifi-assembly-workflow/blob/master/recommendations.md#stage-3-post-assembly-quality-control)
 
 ---
 
 # General recommendations 
 
-A more detailed Module and workflow descriptions are made avaiable 
-- [Workflow description](workflows.md)
+A more detailed module and workflow description is [available here](workflows.md).
 
 ---
 
 # Resources available here
 
-This repository contains structured documentation for [dependencies and usage], including links to existing repositories and community resources, as well as a description of the optimisations achieved on the following compute systems:
+This repository contains structured documentation for dependencies and usage, including links to existing repositories and community resources, as well as a description of the optimisations achieved on the following compute systems:
 
-- [dependencies and usage](infrastructure_optimisation.md)
+- [Gadi @ the National Computational Infrastructure (NCI)](infrastructure_optimisation.md)
 - ...
 
 ---
 
 # Attributions
 
-This work is developed at AGRF and supported by the Australian BioCommons via Bioplatforms Australia funding, the Australian Research Data Commons (https://doi.org/10.47486/PL105) and the Queensland Government RICF programme. Bioplatforms Australia and the Australian Research Data Commons are enabled by the National Collaborative Research Infrastructure Strategy (NCRIS).
+This work was developed at AGRF and supported by the Australian BioCommons via Bioplatforms Australia funding, the Australian Research Data Commons (https://doi.org/10.47486/PL105) and the Queensland Government RICF programme. Bioplatforms Australia and the Australian Research Data Commons are enabled by the National Collaborative Research Infrastructure Strategy (NCRIS).
 
 The documentation in this repository is based on Australian BioCommons guidelines. 
