@@ -217,9 +217,9 @@ The following paths contain all modules required for the pipeline.
 
 Direct training and help is available if you are new to HPC and/or new to NCI/Gadi.
 
-Basic information to get started with the NCI GADI for bioinformatics can be found at https://github.com/AusARG/ABLeS/wiki/temppage.
-For NCI support, contact the NCI helpdesk directly at https://www.nci.org.au/users/nci-helpdesk
-Queue limits and structure explained at https://opus.nci.org.au/display/Help/4.+PBS+Jobs
+- Basic information to get started with the NCI Gadi for bioinformatics can be found at https://github.com/AusARG/ABLeS/wiki/temppage.
+- For NCI support, contact the NCI helpdesk directly at https://www.nci.org.au/users/nci-helpdesk
+- Queue limits and structure explained at https://opus.nci.org.au/display/Help/4.+PBS+Jobs
 
 # 3rd party Tutorials 
 
@@ -258,13 +258,14 @@ SOFTWARE.
 
 # Acknowledgements/citations/credits
 
-```
-Jung, H. et al. Twelve quick steps for genome assembly and annotation in the classroom. PLoS Comput. Biol. 16, 1–25 (2020).
-2020, G. A. W. No Title. https://ucdavis-bioinformatics-training.github.io/2020-Genome_Assembly_Workshop/kmers/kmers.
-Sović, I. et al. Improved Phased Assembly using HiFi Data. (2020).
-Gurevich, A., Saveliev, V., Vyahhi, N. & Tesler, G. QUAST: Quality assessment tool for genome assemblies. Bioinformatics 29, 1072–1075 (2013).
-Waterhouse, R. M. et al. BUSCO applications from quality assessments to gene prediction and phylogenomics. Mol. Biol. Evol. 35, 543–548 (2018).
+> Jung, H. et al. Twelve quick steps for genome assembly and annotation in the classroom. PLoS Comput. Biol. 16, 1–25 (2020).
 
-```
+> 2020, G. A. W. No Title. https://ucdavis-bioinformatics-training.github.io/2020-Genome_Assembly_Workshop/kmers/kmers.
+
+> Sović, I. et al. Improved Phased Assembly using HiFi Data. (2020).
+
+> Gurevich, A., Saveliev, V., Vyahhi, N. & Tesler, G. QUAST: Quality assessment tool for genome assemblies. Bioinformatics 29, 1072–1075 (2013).
+
+> Waterhouse, R. M. et al. BUSCO applications from quality assessments to gene prediction and phylogenomics. Mol. Biol. Evol. 35, 543–548 (2018).
 
 ---
