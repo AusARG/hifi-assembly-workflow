@@ -181,7 +181,7 @@ N/A
 | Maturity         | Production                                                                        | Production         | production                    |
 | Creators         | Naga, Kenneth                                                                     | Naga, Kenneth      | Naga, Kenneth                 |
 | Source           | [AusARG/hifi-assembly-workflow](https://github.com/AusARG/hifi-assembly-workflow) |
-| License          |                                                                                   |                    |                               |
+| License          | MIT License                                                                       | MIT License        | MIT License                   |
 | Workflow manager | NextFlow                                                                          | NextFlow           | NextFlow                      |
 | Container        | No containers used                                                                | No containers used | No containers used            |
 | Install method   | Manual                                                                            | Manual             | Manual                        |
